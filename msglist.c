@@ -3,7 +3,7 @@
 #include <string.h>
 #include "h/UDPcomm.h"
 #include "h/sla_type.h"
-
+// my comment
 #include <unistd.h> 
 #include <errno.h> 
 #include <netdb.h> 
@@ -386,3 +386,4 @@ char expectedResponseNumber[MSG_NR_LEN+1];
 		return COMM_END;
 
 }
+//

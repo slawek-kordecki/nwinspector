@@ -23,7 +23,7 @@ char * messages[] = {
                         "106| |107|", 				// 7
                         "107|I got the IP of CM and make my job|100|", 				// 8
                         "108|ConnectioManager is not running|105|", 				// 9
-                        "109|I got the IP of CM and start the CM|100|", 				// 10
+                        "109|I got the IP of CManager and start the CM|100|", 				// 10
                         "999|Bye|999|", 				// 11
                         "NULL|" 				// 12
                         };

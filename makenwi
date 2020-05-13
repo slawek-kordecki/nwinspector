@@ -1,12 +1,12 @@
 ##############################################################################
 #
-# makefile fuer das CMS-Projekt
-#	19.11.94 Slawek Kordecki
+# makefile fuer das Network Inspector Projekt
+#	10.10.2018 Slawek Kordecki
 #
 ##############################################################################
 
-PHOME=/root/Documents/Textdocuments/SOFTWARE/C-CODE/UDP-Server-Client/
-PHOME=/opt/UDP-Server-Client-OLD/C-Project/UDP-Server-Client/
+
+PHOME=./
 PB=$(PHOME)bin/
 PS=$(PHOME)/
 PH=$(PS)h/

@@ -1,0 +1,27 @@
+##############################################################################
+#
+# makefile fuer das CMS-Projekt
+#	19.11.94 Slawek Kordecki
+#
+##############################################################################
+
+PHOME=/root/Documents/Textdocuments/SOFTWARE/C-CODE/UDP-Server-Client/
+PHOME=/opt/UDP-Server-Client-OLD/C-Project/UDP-Server-Client/
+PB=$(PHOME)bin/
+PS=$(PHOME)/
+PH=$(PS)h/
+PO=$(PS)o/
+
+CCW=cc -w -I$(PH)
+OBS=-c -o$(PO)
+
+DONE.SP : $(PB)nwiWorker  $(PB)nwiInspector
+	date > DONE.NWI
+$(PB)nwiWorker  : $(PS)UDPServer.c $(PO)timeproc.o  $(PO)msglist.o
+	$(CCW) -o $(PB)nwiWorker $(PS)UDPServer.c $(PO)timeproc.o  $(PO)msglist.o 
+$(PB)nwiInspector  : $(PS)UDPClient.c $(PO)timeproc.o  $(PO)msglist.o
+	$(CCW) -o $(PB)nwiInspector $(PS)UDPClient.c $(PO)timeproc.o  $(PO)msglist.o 
+$(PO)msglist.o : $(PS)msglist.c $(PH)UDPcomm.h 
+	$(CCW) $(OBS)msglist.o msglist.c
+$(PO)timeproc.o : $(PS)timeproc.c
+	$(CCW) $(OBS)timeproc.o timeproc.c
